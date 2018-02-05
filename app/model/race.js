@@ -47,7 +47,7 @@ const SchemaDefine = {
 
 const schema = new Schema(SchemaDefine);
 schema.index({ user_contact: 1 }, { unique: true });
-schema.index({ user_mobile: 1 }, { unique: true });
+schema.index({ user_mobile: 1 }, { unique: false });
 
 module.exports = app => {
   const { mongoose } = app;

@@ -24,7 +24,7 @@ class RaceService extends Service {
     assert(user_name, '办理人姓名不能为空');
     assert(user_contact, '办理人联系电话不能为空');
 
-    const entity = await model.findOne().or(trimData({ mobile, user_mobile })).exec();
+    const entity = await model.findOne().or(trimData({ user_contact, user_mobile })).exec();
     if (entity) {
       throw new BusinessError(ErrorCode.SERVICE_FAULT, '办理人信息已存在');
     }
