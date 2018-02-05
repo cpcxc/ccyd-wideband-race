@@ -19,7 +19,7 @@ class HomeController extends Controller {
   }
   // POST
   async query() {
-    const res = await this.service.admin.query(this.ctx.query);
+    const res = await this.service.admin.query(this.ctx.request.body);
     if (res) {
       this.ctx.success(res);
     } else {
@@ -30,7 +30,7 @@ class HomeController extends Controller {
   // GET
   async exportXlsx() {
     const { ctx } = this;
-    const res = await this.service.admin.exportXlsx();
+    const res = await this.service.admin.exportXlsx(this.ctx.query);
     if (res) {
       ctx.set('content-type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
       ctx.set('content-disposition', 'attachment;filename=' + res.name);

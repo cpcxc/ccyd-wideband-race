@@ -8,6 +8,6 @@ module.exports = app => {
   router.get('/', controller.home.index);
   router.post('/api/submit', controller.home.submit);
   router.post('/admin/login', controller.admin.login);
-  router.get('/admin/query', controller.admin.query);
+  router.post('/admin/query', controller.admin.query);
   router.get('/admin/exportXlsx', controller.admin.exportXlsx);
 };
