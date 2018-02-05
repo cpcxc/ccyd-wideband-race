@@ -1,0 +1,4 @@
+GET http://localhost:7001/admin/query?page=1&size=10&start=20180201&end=20180205 HTTP/1.1
+content-type: application/json
+Accept: application/json
+

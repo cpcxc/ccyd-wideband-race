@@ -1,27 +1,31 @@
 {
-  "name": "party-srv",
+  "name": "bandrace-srv",
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "egg": {
+    "framework": "naf-framework-mongoose"
+  },
   "dependencies": {
     "await-stream-ready": "^1.0.1",
-    "egg": "^2.0.0",
-    "egg-scripts": "^2.1.0",
+    "egg": "^2.3.0",
+    "egg-scripts": "^2.5.0",
     "iconv-lite": "^0.4.19",
     "jszip": "^3.1.5",
-    "moment": "^2.19.4",
-    "mongodb": "^3.0.0-rc0",
+    "moment": "^2.20.1",
+    "mongodb": "^3.0.2",
+    "naf-framework-mongoose": "^0.0.30",
     "stream-wormhole": "^1.0.3",
-    "xlsx": "^0.11.14"
+    "xlsx": "^0.11.19"
   },
   "devDependencies": {
     "autod": "^3.0.1",
-    "autod-egg": "^1.0.0",
-    "egg-bin": "^4.3.5",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.3.7",
     "egg-ci": "^1.8.0",
-    "egg-mock": "^3.13.0",
-    "eslint": "^4.11.0",
-    "eslint-config-egg": "^5.1.0",
+    "egg-mock": "^3.14.0",
+    "eslint": "^4.17.0",
+    "eslint-config-egg": "^6.0.0",
     "webstorm-disable-index": "^1.2.0"
   },
   "engines": {

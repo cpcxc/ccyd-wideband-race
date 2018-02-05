@@ -1,0 +1,19 @@
+POST http://localhost:7001/api/submit HTTP/1.1
+content-type: application/json
+Accept: application/json
+
+{
+    "dept": "测试部",
+    "name": "张无忌",
+    "number": "500001",
+    "mobile": "13505000002",
+    "area": "五当山",
+    "village": "真武观",
+    "building": "大殿",
+    "unit": "一单元",
+    "door": "101号",
+    "user_name": "张三丰", 
+    "user_contact": "13505000003",
+    "user_mobile": "13505000003",
+    "remark": "无"
+}

@@ -1,8 +1,5 @@
 'use strict';
 
-const { sep } = require('path');
-const root_url = '';
-
 module.exports = appInfo => {
   const config = exports = {};
 
@@ -12,17 +9,27 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = [];
 
-  // 安全配置
-  config.security = {
-    csrf: {
-      // ignoreJSON: true, // 默认为 false，当设置为 true 时，将会放过所有 content-type 为 `application/json` 的请求
-      enable: false,
+  config.errorMongo = {
+    details: true,
+  };
+  config.errorHandler = {
+    details: true,
+  };
+
+  // mongoose config
+  config.mongoose = {
+    url: 'mongodb://localhost:27017/ccyd',
+    options: {
+      useMongoClient: true,
+      user: 'root',
+      pass: 'Ziyouyanfa#@!',
+      authSource: 'admin',
     },
   };
 
-  config.cdn = {
-    repos_root_path: `${appInfo.baseDir}${sep}upload`,
-    repos_root_url: `${root_url}/upload`,
+  config.logger = {
+    // level: 'DEBUG',
+    // consoleLevel: 'DEBUG',
   };
 
   return config;
