@@ -2,13 +2,12 @@
 
 const assert = require('assert');
 const Service = require('egg').Service;
-const { trimData } = require('naf-core').Util;
 const { BusinessError, ErrorCode } = require('naf-core').Error;
 
 const { sep } = require('path');
 const moment = require('moment');
-const iconv = require('iconv-lite');
-const fs = require('fs');
+// const iconv = require('iconv-lite');
+// const fs = require('fs');
 const xlsx = require('xlsx');
 
 moment.locale('zh-cn');
